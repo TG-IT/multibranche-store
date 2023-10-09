@@ -24,6 +24,8 @@ return [
     'login_password'                 => 'Password',
     'login_password_confirmation'    => 'Password confirmation',
     'logout'                         => 'Logout',
+    'upload_logo'                    => 'Upload Logo',
+    'branch-management'              => 'Branch Managment',
     'month'                          => 'Month',
     'no'                             => 'No',
     'pleaseSelect'                   => 'Please select',

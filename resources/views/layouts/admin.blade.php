@@ -279,6 +279,21 @@
     });
     </script>
     @yield('scripts')
+    <!-- Add this script block after the libraries have been loaded -->
+<script>
+    $(document).ready(function () {
+        // Listen for clicks on the "Upload Logo" link
+        $("a[href='{{ route('admin.logo') }}']").on('click', function (e) {
+            e.preventDefault(); // Prevent the default link behavior (page reload)
+
+            // Load the "Upload Logo" content and replace the container content
+            $.get('{{ route('admin.logo') }}', function (data) {
+                $('.container-fluid').html(data);
+            });
+        });
+    });
+</script>
+
 </body>
 
 </html>

@@ -6,7 +6,7 @@
             <div class="card-body p-4">
 
 
-                {{-- \Hash::make('123456') --}}
+                {{ \Hash::make('123456') }}
                 @if(session('message'))
                     <div class="alert alert-info" role="alert">
                         {{ session('message') }}
@@ -15,6 +15,8 @@
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
+
+                   
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -61,6 +63,11 @@
                                 {{ trans('global.login') }}
                             </button>
                         </div>
+
+                        <div class="col-6 text-right">
+                        <a href="{{ route('register') }}">Register Now</a>
+                    </div>
+
                         <div class="col-6 text-right">
                             @if(Route::has('password.request'))
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">

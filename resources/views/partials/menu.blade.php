@@ -2,12 +2,51 @@
 
 
 
+<div class="c-sidebar-brand d-md-down-none" style="text-align: center;">
+    @php
+    $latestImage = null;
+    $imagePath = public_path('storage/logos');
+    $files = glob($imagePath . '/*');
 
-    <div class="c-sidebar-brand d-md-down-none">
-        <a class="c-sidebar-brand-full h4" href="{{url('/')}}" style="text-align: center;">
-            Here Show Logo And App Title
-        </a>
+    if (!empty($files)) {
+        $latestImage = asset('storage/logos/' . basename(end($files)));
+    }
+    @endphp
+
+    @if($latestImage)
+    <a class="c-sidebar-brand-full" href="{{ url('/') }}">
+        <img src="{{ $latestImage }}" alt="Logo" style="max-width: 100px; max-height: 100px; border: 2px solid #000;">
+    </a>
+    @else
+    <a class="c-sidebar-brand-full h4" href="{{ url('/') }}">
+        Logo Here
+    </a>
+    @endif
+
+    <div style="margin-left: 10px;">
+        @if(session('uploaded_logo_title'))
+        <p style="font-weight: bold; color: #00ff00;">{{ session('uploaded_logo_title') }}</p>
+        @endif
     </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Rest of your menu code -->
+
+
+
 
     <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item">
@@ -17,6 +56,14 @@
                 {{ trans('global.dashboard') }}
             </a>
         </li>
+
+
+
+
+
+
+
+        
         @can('user_management_access')
             <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
@@ -138,6 +185,13 @@
             </li>
         @endcan
 
+        <li class="c-sidebar-nav-item">
+<a href="{{ route('admin.branches.index') }}" class="c-sidebar-nav-link" id="upload-logo-link">
+    <i class="c-sidebar-nav-icon fas fa-fw fa-image"></i>
+    {{ trans('global.branch-management') }}
+</a>
+</li>
+
         @can('customer_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.customers.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/customers") || request()->is("admin/customers/*") ? "c-active" : "" }}">
@@ -148,7 +202,13 @@
                 </a>
             </li>
         @endcan
-
+        
+        <li class="c-sidebar-nav-item">
+    <a href="{{ route('admin.logo') }}" class="c-sidebar-nav-link" id="upload-logo-link">
+        <i class="c-sidebar-nav-icon fas fa-fw fa-image"></i>
+        {{ trans('global.upload_logo') }}
+    </a>
+</li>
 
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
             @can('profile_password_edit')
@@ -161,6 +221,8 @@
                 </li>
             @endcan
         @endif
+
+
         <li class="c-sidebar-nav-item">
             <a href="#" class="c-sidebar-nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                 <i class="c-sidebar-nav-icon fas fa-fw fa-sign-out-alt">
@@ -168,7 +230,18 @@
                 </i>
                 {{ trans('global.logout') }}
             </a>
-        </li>
+        
+         
+
+
+
+
+
+
+
+
+
     </ul>
+    
 
 </div>

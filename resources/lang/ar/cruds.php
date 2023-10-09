@@ -208,8 +208,10 @@ return [
     'branch' => [
         'title'          => 'الفروع',
         'title_singular' => 'الفرع',
+        'branch_name' => 'إسم الفرع',
         'fields'         => [
             'id'                 => 'المعرف',
+            'branch_id'                 => 'معرف الفرع',
             'id_helper'          => ' ',
             'title'              => 'العنوان',
             'title_helper'       => ' ',

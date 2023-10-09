@@ -17,7 +17,11 @@ class StoreBranchRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => [
+            'branch_id' => [
+                'integer',
+                'required',
+            ],
+            'branch_name' => [
                 'string',
                 'required',
             ],
@@ -25,10 +29,8 @@ class StoreBranchRequest extends FormRequest
                 'string',
                 'required',
             ],
-            'address' => [
-                'string',
-                'nullable',
-            ],
+            
+            
         ];
     }
 }

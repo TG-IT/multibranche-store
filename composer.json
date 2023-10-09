@@ -14,14 +14,17 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "inertiajs/inertia-laravel": "*",
         "laravel/dusk": "^6.11",
         "laravel/framework": "^8.12",
+        "laravel/jetstream": "*",
+        "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.5",
-        "yajra/laravel-datatables-oracle": "^9.11",
         "laravel/ui": "^3.3",
-        "spatie/laravel-medialibrary": "^8.7",
+        "laraveldaily/laravel-charts": "^0.2.3",
         "nuovo/spreadsheet-reader": "^0.5.11",
-        "laravel/sanctum": "^2.8"
+        "spatie/laravel-medialibrary": "^8.7",
+        "yajra/laravel-datatables-oracle": "^9.11"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -48,9 +51,11 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "Inertia\\": "vendor/inertia/inertia-laravel/src/"
         }
     },
+    
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
