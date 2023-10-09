@@ -1,5 +1,21 @@
 
+Web Development Basics
+HTML		  : https://www.w3schools.com/html/default.asp
+CSS			  : https://www.w3schools.com/css/default.asp
+BootStrap 4.* : https://getbootstrap.com/docs/4.0/getting-started/introduction/
 
+SQL           : https://www.w3schools.com/sql/sql_intro.asp
+PHP 7.*       : https://www.w3schools.com/php/php_intro.asp
+
+JS			  : https://www.w3schools.com/js/default.asp
+jQuery        :https://www.w3schools.com/jquery/default.asp
+
+
+
+
+Laravel 8.*   : https://laravel.com/docs/8.x
+
+Git           : https://www.w3schools.com/git/default.asp
 
 
 [] Correct the language switcher functionality.

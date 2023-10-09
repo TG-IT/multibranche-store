@@ -24,6 +24,8 @@ return [
     'login_password'                 => 'كلمة المرور',
     'login_password_confirmation'    => 'تكرار كلمة المرور',
     'logout'                         => 'تسجيل خروج',
+    'upload_logo'                    => 'تبديل الشعار',
+    'branch-management'              => 'إدارة الأفرع',
     'month'                          => 'الشهر',
     'no'                             => 'لا',
     'pleaseSelect'                   => 'الرجاء الإختيار',

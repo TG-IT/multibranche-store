@@ -17,10 +17,11 @@ class MassDestroyBranchRequest extends FormRequest
     }
 
     public function rules()
-    {
-        return [
-            'ids'   => 'required|array',
-            'ids.*' => 'exists:branches,id',
-        ];
-    }
+{
+    return [
+        'ids' => 'required|array',
+        'ids.*' => 'numeric',
+    ];
+}
+
 }

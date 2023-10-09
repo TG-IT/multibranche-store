@@ -212,8 +212,10 @@ return [
     'branch' => [
         'title'          => 'Branches',
         'title_singular' => 'Branch',
+        'branch_name' => 'Branch Name',
         'fields'         => [
             'id'                 => 'ID',
+            'branch_id'                 => 'Branch ID',
             'id_helper'          => ' ',
             'title'              => 'Title',
             'title_helper'       => ' ',

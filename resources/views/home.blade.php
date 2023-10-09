@@ -89,9 +89,10 @@
                             </div>
                         </div>
                         <div class="{{ $chart9->options['column_class'] }}">
-                            <h3>{!! $chart9->options['chart_title'] !!}</h3>
-                            {!! $chart9->renderHtml() !!}
-                        </div>
+    <h3>{!! $chart9->options['chart_title'] !!}</h3>
+    {!! $chart9->renderHtml() !!}
+</div>
+
                     </div>
                 </div>
             </div>
@@ -104,6 +105,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
 
 {{-- {!! $chart9->renderJs(); !!} --}}
 
