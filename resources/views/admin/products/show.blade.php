@@ -32,6 +32,18 @@
                         </td>
                     </tr>
                     <tr>
+    <th>
+        {{ trans('cruds.product.fields.branch_name') }}
+    </th>
+    
+    <td>{{ $product->branch->branch_location_id }}</td>
+
+
+    </td>
+</tr>
+
+
+                    <tr>
                         <th>
                             {{ trans('cruds.product.fields.titel') }}
                         </th>
