@@ -30,6 +30,9 @@
                         <option value="{{ $id }}" {{ old('product_categorie_id') == $id ? 'selected' : '' }}>{{ $entry }}</option>
                     @endforeach
                 </select>
+
+
+
                 <a href="{{url('admin/product-categories/create')}}">
                     <i class="fa fa-plus"></i>
                     {{ trans('cruds.product.fields.product_categorie') }}
@@ -51,6 +54,22 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.titel_helper') }}</span>
             </div>
+
+
+            <div class="form-group">
+    <label for="branch_name">{{ trans('cruds.product.fields.branch_name') }}</label>
+    <input class="form-control {{ $errors->has('branch_name') ? 'is-invalid' : '' }}" type="text" name="branch_name" id="branch_name" value="{{ old('branch_name', '') }}">
+    @if($errors->has('branch_name'))
+        <div class="invalid-feedback">
+            {{ $errors->first('branch_name') }}
+        </div>
+    @endif
+    <span class="help-block">{{ trans('cruds.product.fields.branch_name_helper') }}</span>
+</div>
+
+
+
+
 
 
             <br>

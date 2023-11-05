@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use App\Models\Branch; 
 
 class Product extends Model implements HasMedia
 {
@@ -32,6 +33,7 @@ class Product extends Model implements HasMedia
     protected $fillable = [
         'product_categorie_id',
         'titel',
+        'branch_location_id',
         'barcode',
         'description',
         'sell_price',
@@ -68,7 +70,17 @@ class Product extends Model implements HasMedia
     {
         return $this->belongsTo(ProductCategory::class, 'product_categorie_id');
     }
+// added
+public function branch()
+{
+    return $this->belongsTo(Branch::class, 'branch_location_id', 'branch_id');
+}
 
+
+
+
+
+// addied
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Branch extends Model
 {
     use HasFactory;
+    public $table = 'branches';
 
     protected $fillable = [
         'branch_id',
@@ -19,4 +20,7 @@ class Branch extends Model
         'updated_at',
         
     ];
+    
+
+
 }

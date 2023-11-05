@@ -30,6 +30,29 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.product_categorie_helper') }}</span>
             </div>
+<!-- added -->
+<div class="form-group">
+    <label for="branch_id">{{ trans('cruds.product.fields.branch_name') }}</label>
+    <select class="form-control select2 {{ $errors->has('branch_id') ? 'is-invalid' : '' }}" name="branch_id" id="branch_id">
+        @foreach($branches as $branchId => $branchName)
+            <option value="{{ $branchId }}" {{ (old('branch_id') ? old('branch_id') : $product->branch_id ?? '') == $branchId ? 'selected' : '' }}>
+                {{ $branchName }}
+            </option>
+        @endforeach
+    </select>
+    @if($errors->has('branch_id'))
+        <div class="invalid-feedback">
+            {{ $errors->first('branch_id') }}
+        </div>
+    @endif
+    <span class="help-block">{{ trans('cruds.product.fields.branch_name_helper') }}</span>
+</div>
+
+
+
+
+
+
 
             <div class="form-group">
                 <label class="required" for="titel">{{ trans('cruds.product.fields.titel') }}</label>

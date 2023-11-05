@@ -178,6 +178,7 @@ return [
             'titel'                    => 'Title',
             'titel_helper'             => ' ',
             'barcode'                  => 'Barcode',
+            'branch_name'              => 'Branch Name',
             'barcode_helper'           => ' ',
             'description'              => 'Description',
             'description_helper'       => ' ',

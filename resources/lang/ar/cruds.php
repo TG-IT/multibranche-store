@@ -174,6 +174,7 @@ return [
         'title_singular' => 'المادة',
         'fields'         => [
             'id'                       => 'المعرف',
+            'branch_name'              => 'إسم الفرع',
             'id_helper'                => ' ',
             'titel'                    => 'العنوان',
             'titel_helper'             => ' ',
